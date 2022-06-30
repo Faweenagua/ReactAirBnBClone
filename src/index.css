@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -17,4 +18,95 @@ nav > .logo {
   max-width: 100px;
   /* margin: 12px 25px; */
   /* width: 130px; */
+}
+
+section {
+  padding: 20px;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-photogrid {
+  max-width: 400px;
+  align-self: center;
+}
+
+.hero-title,
+.hero-text {
+  margin-left: 80px;
+  color: #000000;
+}
+
+.hero-title {
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  margin-top: 0px;
+}
+
+.cards--section {
+  display: flex;
+  background-color: aliceblue;
+  margin-bottom: 20px;
+}
+
+.card {
+  max-width: 220px;
+  position: relative;
+}
+
+.card--photo {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0px;
+}
+
+.card--status {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: #efefef;
+  color: #616161;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+
+.card--rating {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  /* font-family: "Poppins"; */
+  color: #868687;
+  font-size: 16px;
+  /* font-weight: 200; */
+}
+
+.card--rating_value {
+  color: #616161;
+}
+.card--rating_star {
+  font-size: 20px;
+  color: rgb(235, 42, 42);
+}
+
+.card--text {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  color: #616161;
+}
+
+.card--price {
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+
+.card--price {
+  color: #616161;
+}
+
+.card--price__price {
+  color: #000000;
 }
