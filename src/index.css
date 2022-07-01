@@ -49,6 +49,7 @@ section {
 
 .cards--section {
   display: flex;
+  justify-content: space-evenly;
   background-color: aliceblue;
   margin-bottom: 20px;
 }
@@ -108,5 +109,6 @@ section {
 }
 
 .card--price__price {
+  font-weight: bold;
   color: #000000;
 }
