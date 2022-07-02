@@ -7,18 +7,8 @@ import data from "./data";
 import "./App.css";
 
 function App() {
-  const cardData = data.map((d) => {
-    return (
-      <Card
-        key={d.id}
-        img="Katie-Zaferes.jpg"
-        rating={d.stats.rating}
-        reviewCount={d.stats.reviewCount}
-        country="Togo"
-        title={d.title}
-        price={d.price}
-      />
-    );
+  const cardData = data.map((data) => {
+    return <Card key={data.id} data={data} />;
   });
 
   console.log(cardData);

@@ -4,25 +4,33 @@ import React from "react";
 // import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function Card(props) {
-  const img = "../images/" + props.img;
+  console.log(props);
+  let badgeText;
+  if (props.data.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.data.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card">
-      <h5 className="card--status">SOLD OUT</h5>
+      {badgeText && <h5 className="card--status">{badgeText}</h5>}
       <img
-        src={require(`../images/${props.img}`)}
-        // src={props.img}
+        src={require(`../images/${props.data.coverImg}`)}
+        // src={props.data.img}
         alt="katie zaferes"
         className="card--photo"
       />
       <h5 className="card--rating">
         <span className="card--rating_star">&#9733;</span>
-        <span className="card--rating_value"> {props.rating} </span>
-        <span>({props.reviewCount}) •</span>
-        <span> {props.country}</span>
+        <span className="card--rating_value"> {props.data.stats.rating} </span>
+        <span>({props.data.stats.reviewCount}) •</span>
+        <span> {props.data.location}</span>
       </h5>
-      <p className="card--text">{props.title}</p>
+      <p className="card--text">{props.data.title}</p>
       <h4 className="card--price">
-        <span className="card--price__price">From ${props.price}</span> / person
+        <span className="card--price__price">From ${props.data.price}</span> /
+        person
       </h4>
     </div>
   );
